@@ -24,20 +24,22 @@ export class HISAL extends SegmentClass(HISALProps) {
 
     protected deserialize(input: string[][]) {
         const [
-            [ accountNumber, subAccount, _country, blz ],
+            [ iban, bic, accountNumber, _country, subAccount, blz ],
             [ productName ],
-            [ currency ],
-            [ _cb, booked ],
-            [ _cp, pending ],
-            [ dispo ],
-            [ available ],
+            [ _currency ],
+            [ type, booked, currency,  _date],
         ] = input;
-        this.account = { accountNumber, subAccount, blz, iban: null, bic: null };
+
+        this.account = { accountNumber, subAccount, blz, iban, bic };
         this.productName = productName;
         this.currency = currency;
         this.bookedBalance = Parse.num(booked);
-        this.pendingBalance = Parse.num(pending);
-        this.creditLimit = Parse.num(dispo);
-        this.availableBalance = Parse.num(available);
+        this.pendingBalance = Parse.num('0');
+        this.creditLimit = Parse.num('0');
+        this.availableBalance = Parse.num('0');
+
+        if (type == 'D') {
+            this.bookedBalance *= -1;
+        }
     }
 }
