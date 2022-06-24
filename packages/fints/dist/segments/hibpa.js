@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HIBPA = exports.HIBPAProps = void 0;
 const parse_1 = require("../parse");
 const segment_1 = require("./segment");
 class HIBPAProps {
@@ -9,7 +10,7 @@ exports.HIBPAProps = HIBPAProps;
  * HIBPA (Bankparameter allgemein)
  * Section D.2
  */
-class HIBPA extends segment_1.SegmentClass(HIBPAProps) {
+class HIBPA extends (0, segment_1.SegmentClass)(HIBPAProps) {
     constructor() {
         super(...arguments);
         this.type = "HIBPA";

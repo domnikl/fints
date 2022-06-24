@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKTAN = exports.HKTANProps = void 0;
 const segment_1 = require("./segment");
 class HKTANProps {
 }
@@ -8,7 +9,7 @@ exports.HKTANProps = HKTANProps;
  * HKTAN (TAN-Verfahren festlegen)
  * Section B.5.1
  */
-class HKTAN extends segment_1.SegmentClass(HKTANProps) {
+class HKTAN extends (0, segment_1.SegmentClass)(HKTANProps) {
     constructor() {
         super(...arguments);
         this.type = "HKTAN";

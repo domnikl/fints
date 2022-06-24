@@ -53,12 +53,14 @@
         "cxsd": "^0.1.1",
         "fetch-mock": "^8.0.3",
         "fints-institute-db": "^0.16.0",
-        "jest": "^24.9.0",
-        "jest-runner-groups": "^2.0.1",
-        "ts-jest": "^24.2.0",
+        "jest": "^28.1.1",
+        "jest-runner-groups": "^2.2.0",
+        "jest-docblock": "28.1.1",
+        "ts-jest": "^28.0.5",
         "tslint": "^5.20.0",
         "typedoc": "^0.15.4",
-        "typescript": "^3.7.3"
+        "typescript": "^4.3",
+        "nan": "^2.16.0"
     },
     "dependencies": {
         "bind-decorator": "^1.0.11",

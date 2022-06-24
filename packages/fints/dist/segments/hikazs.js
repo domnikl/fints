@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HIKAZS = exports.HIKAZSProps = void 0;
 const segment_1 = require("./segment");
 const parse_1 = require("../parse");
 class HIKAZSProps {
@@ -9,7 +10,7 @@ exports.HIKAZSProps = HIKAZSProps;
  * HIKAZS (Kontoumsätze/Zeitraum Parameter)
  * Section C.2.1.1.1.1
  */
-class HIKAZS extends segment_1.SegmentClass(HIKAZSProps) {
+class HIKAZS extends (0, segment_1.SegmentClass)(HIKAZSProps) {
     constructor() {
         super(...arguments);
         this.type = "HIKAZS";

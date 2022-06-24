@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HISALS = exports.HISALSProps = void 0;
 const segment_1 = require("./segment");
 const parse_1 = require("../parse");
 class HISALSProps {
@@ -9,7 +10,7 @@ exports.HISALSProps = HISALSProps;
  * HISALS (Saldenabfrage Parameter)
  * Section C.2.1.2
  */
-class HISALS extends segment_1.SegmentClass(HISALSProps) {
+class HISALS extends (0, segment_1.SegmentClass)(HISALSProps) {
     constructor() {
         super(...arguments);
         this.type = "HISALS";

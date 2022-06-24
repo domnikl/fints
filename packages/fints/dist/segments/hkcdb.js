@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKCDB = exports.HKCDBProps = void 0;
 const format_1 = require("../format");
 const segment_1 = require("./segment");
 class HKCDBProps {
@@ -9,7 +10,7 @@ exports.HKCDBProps = HKCDBProps;
  * HKCDB (SEPA-Dauerauftragsbestand abrufen)
  * Section C.10.2.3.4
  */
-class HKCDB extends segment_1.SegmentClass(HKCDBProps) {
+class HKCDB extends (0, segment_1.SegmentClass)(HKCDBProps) {
     constructor() {
         super(...arguments);
         this.type = "HKCDB";

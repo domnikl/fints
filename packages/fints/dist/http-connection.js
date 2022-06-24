@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpConnection = exports.ConnectionConfig = void 0;
 require("isomorphic-fetch");
 const logger_1 = require("./logger");
 const utils_1 = require("./utils");
@@ -36,22 +37,22 @@ class HttpConnection extends ConnectionConfig {
     send(request) {
         return __awaiter(this, void 0, void 0, function* () {
             const { url } = this;
-            logger_1.verbose(`Sending Request: ${request}`);
+            (0, logger_1.verbose)(`Sending Request: ${request}`);
             if (this.debug) {
-                logger_1.verbose(`Parsed Request:\n${request.debugString}`);
+                (0, logger_1.verbose)(`Parsed Request:\n${request.debugString}`);
             }
             const httpRequest = yield fetch(url, {
                 method: "POST",
-                body: utils_1.encodeBase64(String(request)),
+                body: (0, utils_1.encodeBase64)(String(request)),
             });
             if (!httpRequest.ok) {
                 throw new Error(`Received bad status code ${httpRequest.status} from FinTS endpoint.`);
             }
-            const responseString = utils_1.decodeBase64(yield httpRequest.text());
-            logger_1.verbose(`Received Response: ${responseString}`);
+            const responseString = (0, utils_1.decodeBase64)(yield httpRequest.text());
+            (0, logger_1.verbose)(`Received Response: ${responseString}`);
             const response = new response_1.Response(responseString);
             if (this.debug) {
-                logger_1.verbose(`Parsed Response:\n${response.debugString}`);
+                (0, logger_1.verbose)(`Parsed Response:\n${response.debugString}`);
             }
             return response;
         });

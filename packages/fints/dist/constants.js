@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HBCI_VERSION = exports.COMPRESSION_NONE = exports.SECURITY_SUPPLIER_ROLE = exports.SECURITY_BOUNDARY = exports.SECURITY_FUNCTION = exports.HEADER_LENGTH = exports.PRODUCT_VERSION = exports.PRODUCT_NAME = exports.LANG_FR = exports.LANG_EN = exports.LANG_DE = exports.SYNC_MODE_SIGNATURE_ID = exports.SYNC_MODE_LAST_MSG_NUMBER = exports.SYNC_MODE_NEW_CUSTOMER_ID = exports.COUNTRY_CODE = void 0;
 exports.COUNTRY_CODE = 280;
 exports.SYNC_MODE_NEW_CUSTOMER_ID = 0;
 exports.SYNC_MODE_LAST_MSG_NUMBER = 1;

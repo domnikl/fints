@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HNVSK = exports.HNVSKProps = void 0;
 const format_1 = require("../format");
 const parse_1 = require("../parse");
 const segment_1 = require("./segment");
@@ -7,7 +8,7 @@ const constants_1 = require("../constants");
 class HNVSKProps {
 }
 exports.HNVSKProps = HNVSKProps;
-class HNVSK extends segment_1.SegmentClass(HNVSKProps) {
+class HNVSK extends (0, segment_1.SegmentClass)(HNVSKProps) {
     constructor() {
         super(...arguments);
         this.type = "HNVSK";

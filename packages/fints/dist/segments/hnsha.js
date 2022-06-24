@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HNSHA = exports.HNSHAProps = void 0;
 const segment_1 = require("./segment");
 const format_1 = require("../format");
 class HNSHAProps {
@@ -9,7 +10,7 @@ exports.HNSHAProps = HNSHAProps;
  * HNSHA (Signaturabschluss)
  * Section B.5.2
  */
-class HNSHA extends segment_1.SegmentClass(HNSHAProps) {
+class HNSHA extends (0, segment_1.SegmentClass)(HNSHAProps) {
     constructor() {
         super(...arguments);
         this.type = "HNSHA";

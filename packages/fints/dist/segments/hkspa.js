@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKSPA = exports.HKSPAProps = void 0;
 const format_1 = require("../format");
 const segment_1 = require("./segment");
 const constants_1 = require("../constants");
@@ -10,7 +11,7 @@ exports.HKSPAProps = HKSPAProps;
  * HKSPA (SEPA-Kontoverbindung anfordern)
  * Section C.10.1.3
  */
-class HKSPA extends segment_1.SegmentClass(HKSPAProps) {
+class HKSPA extends (0, segment_1.SegmentClass)(HKSPAProps) {
     constructor() {
         super(...arguments);
         this.type = "HKSPA";

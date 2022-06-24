@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HIRMS = exports.HIRMSProps = void 0;
 const return_value_1 = require("../return-value");
 const segment_1 = require("./segment");
 class HIRMSProps {
@@ -9,7 +10,7 @@ exports.HIRMSProps = HIRMSProps;
  * HIRMS (Rückmeldungen zu Segmenten)
  * Section B.7.3
  */
-class HIRMS extends segment_1.SegmentClass(HIRMSProps) {
+class HIRMS extends (0, segment_1.SegmentClass)(HIRMSProps) {
     constructor() {
         super(...arguments);
         this.type = "HIRMS";

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKIDN = exports.HKIDNProps = void 0;
 const format_1 = require("../format");
 const segment_1 = require("./segment");
 const constants_1 = require("../constants");
@@ -10,7 +11,7 @@ exports.HKIDNProps = HKIDNProps;
  * HKIDN (Identifikation)
  * Section C.3.1.2
  */
-class HKIDN extends segment_1.SegmentClass(HKIDNProps) {
+class HKIDN extends (0, segment_1.SegmentClass)(HKIDNProps) {
     constructor() {
         super(...arguments);
         this.type = "HKIDN";

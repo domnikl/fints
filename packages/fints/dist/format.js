@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Format = void 0;
 const date_fns_1 = require("date-fns");
 const utils_1 = require("./utils");
 /**
@@ -15,7 +16,7 @@ exports.Format = {
      */
     date(date) {
         const dateToFormat = date ? date : new Date();
-        return date_fns_1.format(dateToFormat, "yyyMMdd");
+        return (0, date_fns_1.format)(dateToFormat, "yyyMMdd");
     },
     /**
      * Format a binary string with a length specification.
@@ -60,7 +61,7 @@ exports.Format = {
         if (!str) {
             return "";
         }
-        return utils_1.escapeFinTS(str);
+        return (0, utils_1.escapeFinTS)(str);
     },
     /**
      * Format a set of digits.
@@ -69,7 +70,7 @@ exports.Format = {
      *
      * @return The formatted string.
      */
-    dig(num) { return utils_1.leftPad(String(num), 12); },
+    dig(num) { return (0, utils_1.leftPad)(String(num), 12); },
     /**
      * Format a time. The date part is ignored.
      *
@@ -79,7 +80,7 @@ exports.Format = {
      */
     time(date) {
         const dateToFormat = date ? date : new Date();
-        return date_fns_1.format(dateToFormat, "HHMMss");
+        return (0, date_fns_1.format)(dateToFormat, "HHMMss");
     },
     /**
      * Return an empty string.

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentClass = exports.Segment = void 0;
 const parse_1 = require("../parse");
 const utils_1 = require("../utils");
 /**
@@ -15,7 +16,7 @@ class Segment {
             Object.assign(this, arg);
         }
         else {
-            const splitted = typeof arg === "string" ? utils_1.parse(arg)[0] : arg;
+            const splitted = typeof arg === "string" ? (0, utils_1.parse)(arg)[0] : arg;
             this.segNo = parse_1.Parse.num(splitted[0][1]);
             this.version = parse_1.Parse.num(splitted[0][2]);
             if (splitted[0].length > 3) {

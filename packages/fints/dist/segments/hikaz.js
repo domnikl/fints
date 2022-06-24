@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HIKAZ = exports.HIKAZProps = void 0;
 const segment_1 = require("./segment");
 class HIKAZProps {
 }
@@ -8,7 +9,7 @@ exports.HIKAZProps = HIKAZProps;
  * HIKAZ (Kontoumsätze rückmelden/Zeitraum)
  * Section C.2.1.1.1.1
  */
-class HIKAZ extends segment_1.SegmentClass(HIKAZProps) {
+class HIKAZ extends (0, segment_1.SegmentClass)(HIKAZProps) {
     constructor() {
         super(...arguments);
         this.type = "HIKAZ";

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKSAL = exports.HKSALProps = void 0;
 const format_1 = require("../format");
 const segment_1 = require("./segment");
 const constants_1 = require("../constants");
@@ -10,7 +11,7 @@ exports.HKSALProps = HKSALProps;
  * HKSAL (Saldenabfrage)
  * Section C.2.1.2.2
  */
-class HKSAL extends segment_1.SegmentClass(HKSALProps) {
+class HKSAL extends (0, segment_1.SegmentClass)(HKSALProps) {
     constructor() {
         super(...arguments);
         this.type = "HKSAL";

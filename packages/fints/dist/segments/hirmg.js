@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HIRMG = exports.HIRMGProps = void 0;
 const segment_1 = require("./segment");
 const return_value_1 = require("../return-value");
 class HIRMGProps {
@@ -9,7 +10,7 @@ exports.HIRMGProps = HIRMGProps;
  * HIRMG (Rückmeldungen zur Gesamtnachricht)
  * Section B.7.2
  */
-class HIRMG extends segment_1.SegmentClass(HIRMGProps) {
+class HIRMG extends (0, segment_1.SegmentClass)(HIRMGProps) {
     constructor() {
         super(...arguments);
         this.type = "HIRMG";

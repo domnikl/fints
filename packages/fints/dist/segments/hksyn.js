@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKSYN = exports.HKSYNProps = void 0;
 const constants_1 = require("../constants");
 const format_1 = require("../format");
 const segment_1 = require("./segment");
@@ -10,7 +11,7 @@ exports.HKSYNProps = HKSYNProps;
  * HKSYN (Synchronisation)
  * Section C.8.1.2
  */
-class HKSYN extends segment_1.SegmentClass(HKSYNProps) {
+class HKSYN extends (0, segment_1.SegmentClass)(HKSYNProps) {
     constructor() {
         super(...arguments);
         this.type = "HKSYN";

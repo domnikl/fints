@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKKAZ = exports.HKKAZProps = void 0;
 const format_1 = require("../format");
 const segment_1 = require("./segment");
 const constants_1 = require("../constants");
@@ -10,7 +11,7 @@ exports.HKKAZProps = HKKAZProps;
  * HKKAZ (Kontoumsätze)
  * Section C.2.1.1.1.2
  */
-class HKKAZ extends segment_1.SegmentClass(HKKAZProps) {
+class HKKAZ extends (0, segment_1.SegmentClass)(HKKAZProps) {
     constructor() {
         super(...arguments);
         this.type = "HKKAZ";

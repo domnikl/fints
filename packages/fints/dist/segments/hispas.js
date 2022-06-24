@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HISPAS = exports.HISPASProps = void 0;
 const segment_1 = require("./segment");
 class HISPASProps {
     constructor() {
@@ -10,7 +11,7 @@ exports.HISPASProps = HISPASProps;
 /**
  * HISPAS
  */
-class HISPAS extends segment_1.SegmentClass(HISPASProps) {
+class HISPAS extends (0, segment_1.SegmentClass)(HISPASProps) {
     constructor() {
         super(...arguments);
         this.type = "HISPAS";

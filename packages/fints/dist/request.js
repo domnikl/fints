@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Request = exports.RequestConfig = void 0;
 const segments_1 = require("./segments");
 const constants_1 = require("./constants");
 /**

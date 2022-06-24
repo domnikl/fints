@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKEND = exports.HKENDProps = void 0;
 const segment_1 = require("./segment");
 class HKENDProps {
 }
 exports.HKENDProps = HKENDProps;
-class HKEND extends segment_1.SegmentClass(HKENDProps) {
+class HKEND extends (0, segment_1.SegmentClass)(HKENDProps) {
     constructor() {
         super(...arguments);
         this.type = "HKEND";

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PinTanClient = void 0;
 const client_1 = require("./client");
 const dialog_1 = require("./dialog");
 const request_1 = require("./request");

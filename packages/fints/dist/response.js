@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Response = void 0;
 const segments_1 = require("./segments");
 const utils_1 = require("./utils");
 /**
@@ -7,7 +8,7 @@ const utils_1 = require("./utils");
  */
 class Response {
     constructor(data) {
-        this.segmentStrings = utils_1.parse(data);
+        this.segmentStrings = (0, utils_1.parse)(data);
         const hnvsd = this.findSegment(segments_1.HNVSD);
         if (hnvsd) {
             this.segmentStrings.push(...hnvsd.rawSegments);

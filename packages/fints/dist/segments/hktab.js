@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKTAB = exports.HKTABProps = void 0;
 const segment_1 = require("./segment");
 const format_1 = require("../format");
 class HKTABProps {
@@ -9,7 +10,7 @@ exports.HKTABProps = HKTABProps;
  * HKTAB (Verfügbare TAN-Medien ermitteln)
  * Section C.2.1.2
  */
-class HKTAB extends segment_1.SegmentClass(HKTABProps) {
+class HKTAB extends (0, segment_1.SegmentClass)(HKTABProps) {
     constructor() {
         super(...arguments);
         this.type = "HKTAB";

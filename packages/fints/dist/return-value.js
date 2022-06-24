@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReturnValue = void 0;
 /**
  * Wraps a return value used in the HIRMG and HIRMS segments.
  */

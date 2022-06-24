@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HKVVB = exports.HKVVBProps = void 0;
 const format_1 = require("../format");
 const segment_1 = require("./segment");
 const constants_1 = require("../constants");
@@ -10,7 +11,7 @@ exports.HKVVBProps = HKVVBProps;
  * HKVVB (Verarbeitungsvorbereitung)
  * Section C.3.1.3
  */
-class HKVVB extends segment_1.SegmentClass(HKVVBProps) {
+class HKVVB extends (0, segment_1.SegmentClass)(HKVVBProps) {
     constructor() {
         super(...arguments);
         this.type = "HKVVB";

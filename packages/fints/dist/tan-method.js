@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TanMethod = exports.tanMethodArgumentMap = void 0;
 const parse_1 = require("./parse");
 exports.tanMethodArgumentMap = new Map();
 exports.tanMethodArgumentMap.set(1, [
@@ -101,6 +102,29 @@ exports.tanMethodArgumentMap.set(5, [
     "supportedMediaNumber",
 ]);
 exports.tanMethodArgumentMap.set(6, [
+    "securityFunction",
+    "tanProcess",
+    "techId",
+    "zkaId",
+    "zkaVersion",
+    "name",
+    "maxLengthInput",
+    "allowedFormat",
+    "textReturnvalue",
+    "maxLengthReturnvalue",
+    "multiple",
+    "tanTimeDialogAssociation",
+    "cancellable",
+    "smsChargeAccountRequired",
+    "principalAccountRequired",
+    "challengeClassRequired",
+    "challengeStructured",
+    "initializationMode",
+    "descriptionRequired",
+    "hhdUcRequired",
+    "supportedMediaNumber",
+]);
+exports.tanMethodArgumentMap.set(7, [
     "securityFunction",
     "tanProcess",
     "techId",

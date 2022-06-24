@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HICDBS = exports.HICDBSProps = void 0;
 const segment_1 = require("./segment");
 const parse_1 = require("../parse");
 class HICDBSProps {
@@ -9,7 +10,7 @@ exports.HICDBSProps = HICDBSProps;
  * HICDBS (SEPA-Dauerauftragsbestand Parameter)
  * Section C.10.2.3.4
  */
-class HICDBS extends segment_1.SegmentClass(HICDBSProps) {
+class HICDBS extends (0, segment_1.SegmentClass)(HICDBSProps) {
     constructor() {
         super(...arguments);
         this.type = "HICDBS";

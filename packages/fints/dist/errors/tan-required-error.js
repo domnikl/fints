@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TanRequiredError = void 0;
 class TanRequiredError extends Error {
     constructor(message, transactionReference, challengeText, challengeMedia, dialog) {
         super(message);

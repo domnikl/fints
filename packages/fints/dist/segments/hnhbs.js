@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HNHBS = exports.HNHBSProps = void 0;
 const segment_1 = require("./segment");
 const format_1 = require("../format");
 class HNHBSProps {
@@ -9,7 +10,7 @@ exports.HNHBSProps = HNHBSProps;
  * HNHBS (Nachrichtenabschluss)
  * Section B.5.3
  */
-class HNHBS extends segment_1.SegmentClass(HNHBSProps) {
+class HNHBS extends (0, segment_1.SegmentClass)(HNHBSProps) {
     constructor() {
         super(...arguments);
         this.type = "HNHBS";

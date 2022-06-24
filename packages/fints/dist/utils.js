@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.unescapeFinTS = exports.escapeFinTS = exports.leftPad = exports.parse = exports.decodeBase64 = exports.encodeBase64 = void 0;
 const iconv_lite_1 = require("iconv-lite");
 /**
  * Base 64 encode a string for use with fints. Fints uses ISO-8859-1 encoding which will be the encoding used
@@ -10,7 +11,7 @@ const iconv_lite_1 = require("iconv-lite");
  * @return The encoded string.
  */
 function encodeBase64(input) {
-    return Buffer.from(iconv_lite_1.encode(input, "ISO-8859-1")).toString("base64");
+    return Buffer.from((0, iconv_lite_1.encode)(input, "ISO-8859-1")).toString("base64");
 }
 exports.encodeBase64 = encodeBase64;
 /**
@@ -22,7 +23,7 @@ exports.encodeBase64 = encodeBase64;
  * @return The decoded string.
  */
 function decodeBase64(input) {
-    return iconv_lite_1.decode(Buffer.from(input, "base64"), "ISO-8859-1");
+    return (0, iconv_lite_1.decode)(Buffer.from(input, "base64"), "ISO-8859-1");
 }
 exports.decodeBase64 = decodeBase64;
 /**

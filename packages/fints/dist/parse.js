@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Parse = void 0;
 const date_fns_1 = require("date-fns");
 const fast_xml_parser_1 = require("fast-xml-parser");
 const iconv_lite_1 = require("iconv-lite");
@@ -57,7 +58,7 @@ exports.Parse = {
      * @return The parsed date.
      */
     date(str) {
-        return date_fns_1.parse(str, "yyyyMMdd", new Date());
+        return (0, date_fns_1.parse)(str, "yyyyMMdd", new Date());
     },
     /**
      * Parse a xml document to an object.
@@ -67,7 +68,7 @@ exports.Parse = {
      * @return The parsed object.
      */
     xml(str) {
-        return fast_xml_parser_1.parse(str);
+        return (0, fast_xml_parser_1.parse)(str);
     },
     challengeHhdUc(str) {
         // tslint:disable-next-line:max-line-length
@@ -78,7 +79,7 @@ exports.Parse = {
         // mime type as string
         // 2 bytes = length of data
         if (str && str[0]) {
-            const buffer = iconv_lite_1.encode(str[0][0], "ISO-8859-1");
+            const buffer = (0, iconv_lite_1.encode)(str[0][0], "ISO-8859-1");
             const mediaTypeLength = buffer.readUIntBE(0, 2);
             const mediaType = buffer.toString("utf8", 2, 2 + mediaTypeLength);
             const imageLength = buffer.readUIntBE(2 + mediaTypeLength, 2);

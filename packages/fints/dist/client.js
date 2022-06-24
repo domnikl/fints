@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Client = void 0;
 require("isomorphic-fetch");
 const parse_1 = require("./parse");
 const segments_1 = require("./segments");
@@ -164,10 +165,10 @@ class Client {
                 return result;
             }, []);
             const bookedString = responseSegments.map((segment) => segment.bookedTransactions || "").join("");
-            const unprocessedStatements = yield mt940_js_1.read(Buffer.from(bookedString, "utf-8"));
+            const unprocessedStatements = yield (0, mt940_js_1.read)(Buffer.from(bookedString, "utf-8"));
             return unprocessedStatements.map((statement) => {
                 const transactions = statement.transactions.map((transaction) => {
-                    const descriptionStructured = mt940_86_structured_1.parse86Structured(transaction.description);
+                    const descriptionStructured = (0, mt940_86_structured_1.parse86Structured)(transaction.description);
                     return Object.assign(Object.assign({}, transaction), { descriptionStructured });
                 });
                 return Object.assign(Object.assign({}, statement), { transactions });

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HICDB = exports.HICDBProps = void 0;
 const segment_1 = require("./segment");
 const parse_1 = require("../parse");
 class HICDBProps {
@@ -9,7 +10,7 @@ exports.HICDBProps = HICDBProps;
  * HICDB (SEPA-Dauerauftragsbestand rückmelden)
  * Section C.10.2.3.4
  */
-class HICDB extends segment_1.SegmentClass(HICDBProps) {
+class HICDB extends (0, segment_1.SegmentClass)(HICDBProps) {
     constructor() {
         super(...arguments);
         this.type = "HICDB";

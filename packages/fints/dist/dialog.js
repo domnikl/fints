@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dialog = exports.DialogConfig = void 0;
 const segments_1 = require("./segments");
 const request_1 = require("./request");
 const utils_1 = require("./utils");
@@ -93,7 +94,7 @@ class Dialog extends DialogConfig {
                 new segments_1.HKSYN({ segNo: 5 }),
             ];
             const response = yield this.send(new request_1.Request({ blz, name, pin, systemId, dialogId, msgNo, segments }));
-            this.systemId = utils_1.escapeFinTS(response.systemId);
+            this.systemId = (0, utils_1.escapeFinTS)(response.systemId);
             this.dialogId = response.dialogId;
             this.hisalsVersion = response.segmentMaxVersion(segments_1.HISALS);
             this.hikazsVersion = response.segmentMaxVersion(segments_1.HIKAZS);

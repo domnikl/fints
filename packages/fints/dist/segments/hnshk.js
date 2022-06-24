@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HNSHK = exports.HNSHKProps = void 0;
 const segment_1 = require("./segment");
 const format_1 = require("../format");
 const constants_1 = require("../constants");
@@ -10,7 +11,7 @@ exports.HNSHKProps = HNSHKProps;
  * HNSHK (Signaturkopf)
  * Section B.5.1
  */
-class HNSHK extends segment_1.SegmentClass(HNSHKProps) {
+class HNSHK extends (0, segment_1.SegmentClass)(HNSHKProps) {
     constructor() {
         super(...arguments);
         this.type = "HNSHK";

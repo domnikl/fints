@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.parse86Structured = exports.assemblePaymentReference = exports.parsePaymentReferenceTan = exports.parsePaymentReferenceDate = exports.is86Structured = void 0;
 const detectionRegex = /(?:^|\?)(..)(.*?)(?:$|\?)/g;
 /**
  * Used to sniff whether the 86 section of the MT940 statement list supports the fints structured
